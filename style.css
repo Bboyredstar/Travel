@@ -1,0 +1,192 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;  
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    margin: 0 auto;
+    background:#ffffff;
+}
+/*header*/
+.header{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height: 800px;
+    min-width:600px;
+    min-width: 1360px;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items:center;
+    background:rgba(240, 74, 111, 50%) url('./image/venice-1280x800.jpg');
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-y:top;
+    background-position-x: center;
+    background-size: cover;
+    box-shadow:0 10px 10px 10px#f5d9ee; 
+    overflow: hidden;
+}
+.header-top{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 70px;
+    padding-left: 160px;
+    padding-right: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Proxima Nova Condensed Regular',sans-serif;
+    font-size: 0.875rem;
+    background: rgba(0, 0, 0, 15%);
+}
+.header__logo{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin: 0;
+}
+.logo{
+    cursor: default;
+    font-family:'ForteMT';
+    font-size: 24px;
+    font-weight: normal;
+    color:#ffffff;
+}
+/*navigation*/
+.header__nav{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;    
+}
+.nav__links{
+    font-family: 'Proxima Nova Light';
+    font-size:14px;
+    font-style: normal;
+    font-weight: bolder;
+    text-decoration: none;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 50%);
+}
+.nav__links:after{
+    content: "";
+    margin-top:10px;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    color:rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+    display: block;
+    width: 0;
+}
+.nav__links:hover{
+    color:rgb(255,255,255);
+}
+.nav__links:hover:after {
+    width: 100%;
+}
+/*Search Form*/
+.header__title{
+    display:inline-block;
+    text-align: center;
+}
+.title{
+    color:rgb(255, 255, 255);
+    font-size: 48px;
+    font-family: 'Proxima Nova',sans-serif;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+.header__search-form{
+    margin-top: 50px;
+    
+}
+.search-form__input{
+    position: relative;
+    outline: none;
+    height: 50px;
+    width: 330px;
+    border:transparent;
+    border-radius: 25px;
+    padding-left:60px;
+    color: #bfbfbf;
+    font-size:14px;
+    font-family: 'Proxima Nova Light',sans-serif;
+    font-weight: bold;
+    line-height: 50px; 
+    background:rgb(255, 255, 255) url('image/search.png');
+    background-size: auto 40%;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    opacity: 1;
+}
+
+.search-form__submit{
+    position: relative;
+    right:40px;
+    display: inline-block;
+    width: 110px;
+    height: 57px;
+    border:transparent;
+    background: rgb(247,111,141);
+    outline:none;
+    border-radius:30px;
+    color:white;  
+    font-family: 'Proxima Nova Light',sans-serif;  
+    font-weight: 700;
+    font-size:18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.1);
+}
+.search-form__submit:hover{
+    background:rgb(255, 255, 255);
+    color:rgb(247,111,141); 
+    border:1px solid rgb(247,111,141);
+}
+
+
+/*Fonts*/
+    @font-face {
+        font-family: 'Proxima Nova Light';
+        src: url('./fonts/ProximaNova-Light.eot');
+        src: url('./fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/ProximaNova-Light.woff') format('woff'),
+        url('./fonts/ProximaNova-Light.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+    @font-face {
+        font-family: 'font60a6c051c1563a067dd7166123a58698';
+            
+            src:    url('https://nomail.com.ua/files/eot/60a6c051c1563a067dd7166123a58698.eot?#iefix') format('embedded-opentype'),
+                    url('https://nomail.com.ua/files/woff/60a6c051c1563a067dd7166123a58698.woff') format('woff'),
+                    url('https://nomail.com.ua/files/woff2/60a6c051c1563a067dd7166123a58698.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: local('./fonts/Proxima Nova Extrabold'), local('./fonts/Proxima-Nova-Extrabold'),
+                url('./fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+                url('./fonts/ProximaNova-Extrabld.woff') format('woff'),
+                url('ProximaNova-Extrabld.ttf') format('truetype');
+            font-weight: 800;
+            font-style: normal;
+          }
+
+    @font-face { font-family: 'ForteMT';  src: local('ForteMT'), url('https://nomail.com.ua/files/woff/60a6c051c1563a067dd7166123a58698.woff') format('woff'); }
+        
+@media (max-width: 600px){
+
+}
