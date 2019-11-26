@@ -13,31 +13,9 @@ h1,h2,h3,h4,h5,h6{
 }
 /*header*/
 .header{
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width:100%;
-    height: 800px;
-    min-width:600px;
-    min-width: 1360px;
-    display:flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items:center;
-    background:rgba(240, 74, 111, 50%) url('./image/venice-1280x800.jpg');
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-position-y:top;
-    background-position-x: center;
-    background-size: cover;
-    box-shadow:0 10px 10px 10px#f5d9ee; 
-    overflow: hidden;
-}
-.header-top{
     position:fixed;
     top:0;
     left:0;
-    right:0;
     width: 100%;
     height: 70px;
     padding-left: 160px;
@@ -50,46 +28,42 @@ h1,h2,h3,h4,h5,h6{
     background: rgba(0, 0, 0, 15%);
 }
 .header__logo{
-    display: inline-block;
-    width: 200px;
+    display: inline;
     text-align: center;
-    margin: 0;
-}
-.logo{
     cursor: default;
-    font-family:'ForteMT';
+    font-family:'ForteMT',sans-serif;
     font-size: 24px;
     font-weight: normal;
     color:#ffffff;
 }
 /*navigation*/
 .header__nav{
-    width:50%;
-    height: 100%;
+    width: 50%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;    
+    justify-content: space-around;   
 }
 .nav__links{
+    position: relative;
+    display: inline-block;
     font-family: 'Proxima Nova Light';
     font-size:14px;
     font-style: normal;
     font-weight: bolder;
     text-decoration: none;
     line-height: 14px;
+    vertical-align: middle;
     color: rgba(255, 255, 255, 50%);
 }
 .nav__links:after{
+    position: absolute;
     content: "";
-    margin-top:10px;
+    display: block;
+    width: 0;
     height: 2px;
-    width: 100%;
+    bottom: -10px;
     background-color: #ffffff;
     color:rgb(255, 255, 255);
     transition: all .2s ease-in-out;
-    display: block;
-    width: 0;
 }
 .nav__links:hover{
     color:rgb(255,255,255);
@@ -97,8 +71,22 @@ h1,h2,h3,h4,h5,h6{
 .nav__links:hover:after {
     width: 100%;
 }
-/*Search Form*/
-.header__title{
+/*Search Section*/
+.search-section{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(240, 74, 111, 50%) url('./image/venice-1280x800.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-y:top;
+    background-position-x: center;
+}
+.search-section__title{
     display:inline-block;
     text-align: center;
 }
@@ -108,13 +96,17 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Proxima Nova',sans-serif;
     font-weight: normal;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
-.header__search-form{
-    margin-top: 50px;
-    
+.search-section__search-container{
+    display:block;
+    padding-top: 50px;
+}
+.search-form{
+    display:flex;
+    align-items: center;
 }
 .search-form__input{
-    position: relative;
     outline: none;
     height: 50px;
     width: 330px;
@@ -135,10 +127,10 @@ h1,h2,h3,h4,h5,h6{
 
 .search-form__submit{
     position: relative;
-    right:40px;
     display: inline-block;
     width: 110px;
     height: 57px;
+    right:40px; 
     border:transparent;
     background: rgb(247,111,141);
     outline:none;

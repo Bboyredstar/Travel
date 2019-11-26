@@ -9,33 +9,32 @@
 </head>
 <body class="body">
     <header class="header">
-        <div class="header-top">
-            <div class="header__logo">
-                <h1 class="logo">MR Travel</h1>
-            </div>
-            <nav class="header__nav">
-                    <a href="#" class="nav__links">Accomodations</a>
-                    <a href="#" class="nav__links">Events</a></li>
-                    <a href="#" class="nav__links">Destinations</a>
-                    <a href="#" class="nav__links">Trip Guides</a>
-                    <a href="#" class="nav__links">About Us</a>
-            </nav>
+        <div class="header__logo">
+            MR Travel
         </div>
-            <div class="header__title">
-                <h1 class="title">WELCOME TO MR TRAVEL</h1>
-                <h1 class="title">PLAY AND EXPLORER</h1>
-            </div>
-            <div class="header__search-form">
-                <form action="" name="headerSearchForm">
-                    <input type="text" name="searchInput" id="searchInput" class="search-form__input" 
-                    placeholder="Cari Lokasi" 
+        <nav class="header__nav " role ="navigation">
+            <a href="#" class="nav__links">Events</a></li>
+            <a href="#" class="nav__links">Destinations</a>
+            <a href="#" class="nav__links">Trip Guides</a>
+            <a href="#" class="nav__links">About Us</a>
+            <a href="#" class="nav__links">Accomodations</a>
+        </nav>
+    </header>
+    <section class="search-section">
+        <div class="search-section__title">
+            <h1 class="title">welcome to mr travel<br> play and explorer</h1>
+        </div>
+        <div class="search-section__search-container">
+            <form action="" name="headerSearchForm" class="search-form">
+                <input type="text" name="search" id="search" class="search-form__input" 
+                placeholder="Cari Lokasi" 
                     minlength="10" 
                     maxlength="20">
-                    <input type="submit" id="searchSubmit" class="search-form__submit" value="GO">
-                </form>
-            </div>
-     
-    </header>
+                <input type="submit" id="submit" class="search-form__submit" value="GO">
+            </form>
+        </div>
+    </section>
+  
    
 </body>
 </html>
